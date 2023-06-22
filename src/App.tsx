@@ -2,6 +2,7 @@ import './App.scss';
 import Form from './components/form';
 import TasksList from './components/taskList';
 import ScreenWithText from './components/ScreenWithText';
+import tasksStore from './store/TasksStore';
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       
         <div className="container">
           <TasksList />
-          <ScreenWithText text={'test'} />
+          <ScreenWithText text={tasksStore.selectedTaskText}/>
         </div>
         <Form/>
 
